@@ -1,7 +1,5 @@
 
-alph = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
-            'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
-            'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ', '.', ',', '?', '!']
+alph = ['e','q','A','V','s','u','y','?',' ','E','W','M','!','k','B','h','Q','R','G','p','m','f','w',',','b','n','T','l','D','C','X','Y','F','v','r','K','H','Z','t','z','x','O','I','.','a','N','j','g','o','c','d','i','J','L','P','S','U']
 
 def splt(text):
     return [char for char in text]
@@ -23,7 +21,7 @@ def tocode(text,cryptororiginal):
     cusing = cryptororiginal
     for i in x:
         cusing += 1
-        if cusing == (cryptororiginal+2):
+        if cusing == (cryptororiginal+10):
             cusing = cryptororiginal
 
         # Find what index character to be encoded is in alph
@@ -44,7 +42,7 @@ def decode(text,cryptororiginal):
     cusing = cryptororiginal
     for i in x:
         cusing += 1
-        if cusing == (cryptororiginal + 2):
+        if cusing == (cryptororiginal + 10):
             cusing = cryptororiginal
 
         # Find what index character to be decoded is in alph
@@ -61,7 +59,7 @@ def decode(text,cryptororiginal):
 run = 1
 while run == 1:
     option = int(input('Enter 1 to code a message or 2 do decode a message:'))
-    text = input('Enter the text to be translated:')
+    text = input("Enter text to be translated:")
     cryptororiginal = int(input('Please enter your encryption number:'))
     print ('\n')
     if option ==1:
